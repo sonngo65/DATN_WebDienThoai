@@ -1,0 +1,74 @@
+.slide-banner {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+  &__btn {
+    @include locate-align-center();
+    z-index: 10;
+
+    button {
+      width: 40px;
+      height: 40px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      position: relative;
+      svg {
+        @include locate-align-center();
+        font-size: $font-size-xl;
+        color: $black;
+        font-weight: 100;
+        z-index: 10;
+        right: 0;
+      }
+      &::after {
+        content: "";
+        @include locate-align-center();
+
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: rgba($white, 0.6);
+        box-shadow: 0 0 2px 2px rgba($black, 0.2);
+      }
+    }
+    &-left {
+      left: -16px;
+
+      button {
+        svg {
+          right: 0;
+        }
+        &::after {
+          left: -20px;
+        }
+      }
+    }
+    &-right {
+      right: -10px;
+      button {
+        svg {
+          left: 0;
+        }
+        &::after {
+          left: -10px;
+        }
+      }
+    }
+  }
+
+  &-outer {
+    display: flex;
+    position: absolute;
+  }
+  &-item {
+    padding: 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 160px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.cate-product {
+  &__head {
+  }
+  &__child-cate-ls {
+  }
+  &__child-cate-it {
+    text-wrap: nowrap;
+
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 0px 15px 3px 15px;
+    border: 0.3px solid rgba($black2, 0.3);
+  }
+  &__child-cate-li {
+    color: $black;
+    font-size: $font-size-s;
+  }
+  &__content {
+  }
+  &__title {
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: $primaryColor2;
+    box-shadow: 0px 2px 2px 0 rgba($black, 0.2);
+
+    height: 30px;
+    h5 {
+      display: block;
+      width: auto;
+      height: 100%;
+      color: $white;
+      font-size: $font-size-x;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 0;
+      margin-left: 79px;
+      padding: 0 30px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      background-color: $primaryColor;
+    }
+    &::after {
+      content: " ";
+      z-index: 10;
+      position: absolute;
+      border-top: 30px solid $primaryColor;
+      border-left: 30px solid $primaryColor2;
+      left: 50px;
+      top: 0;
+    }
+  }
+}
+@media screen and (min-width: 0px) {
+  .cate-product {
+    &__title {
+      h5 {
+        font-size: $font-size-e;
+        margin: 0;
+        margin-left: 30px;
+        padding: 0px;
+      }
+      &::after {
+        left: 0px;
+        top: 0;
+      }
+    }
+    &__child-cate-ls {
+      overflow-x: scroll;
+      padding: 5px 0 !important;
+      justify-content: start;
+    }
+    &__child-cate-it {
+      margin-left: 2px;
+      border-radius: 7px;
+      padding: 0px 5px 3px 5px;
+    }
+    &__child-cate-li {
+      text-wrap: nowrap;
+      font-size: $font-size-e;
+    }
+  }
+}
+@media screen and (min-width: 576px) {
+  .cate-product {
+    &__title {
+      h5 {
+        font-size: $font-size-m;
+        margin-left: 79px;
+        padding: 0 30px;
+      }
+      &::after {
+        left: 50px;
+        top: 0;
+      }
+    }
+    &__child-cate-ls {
+      overflow-x: auto;
+      justify-content: start;
+    }
+    &__child-cate-it {
+      margin-left: 2px;
+      border-radius: 7px;
+      padding: 0px 5px 3px 5px;
+    }
+    &__child-cate-li {
+      font-size: $font-size-e;
+    }
+  }
+}
+// @media screen and (min-width: 768px) {
+//   .cate-product {
+//     &__title {
+//       h5 {
+//         font-size: $font-size-e;
+//       }
+//     }
+//   }
+// }
+@media screen and (min-width: 992px) {
+  .cate-product {
+    &__child-cate-ls {
+      justify-content: end;
+    }
+
+    &__child-cate-li {
+      font-size: $font-size-s;
+    }
+  }
+}

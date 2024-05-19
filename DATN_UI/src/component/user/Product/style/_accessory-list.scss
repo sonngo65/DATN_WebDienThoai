@@ -1,0 +1,47 @@
+.accessory {
+  background-color: white;
+  border-radius: 10px;
+  &-ls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &-it {
+    padding: 10px 0;
+
+    width: 116px;
+  }
+  &-li {
+    width: 100%;
+    color: black;
+    &:hover {
+      p {
+        color: $primaryColor;
+      }
+      .img-box {
+        box-shadow: 0 0 0 1px $primaryColor;
+      }
+    }
+    p {
+      text-align: center;
+      font-size: $font-size-s;
+      margin: 0;
+      margin-top: 10px;
+      color: $black;
+    }
+    .img-box {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      background-color: rgba($black2, 0.1);
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      img {
+        @include locate-center();
+        width: 50%;
+      }
+    }
+  }
+}

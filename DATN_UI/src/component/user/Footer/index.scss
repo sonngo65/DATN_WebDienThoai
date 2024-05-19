@@ -1,0 +1,57 @@
+.footer {
+  &__head {
+    &-ls {
+    }
+    &-it {
+      svg {
+        font-size: 55px;
+        color: $black;
+      }
+      span {
+        font-size: $font-size-s;
+      }
+      strong {
+        font-size: $font-size-x;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  &__body {
+    margin-top: 40px;
+    background-color: $white;
+
+    padding: 40px 0;
+    .logo {
+      img {
+        width: 60px;
+      }
+    }
+  }
+  &__head-text {
+    font-size: $font-size-xl;
+    font-weight: 700;
+  }
+  &__list__ver {
+    & > li {
+      margin-bottom: 5px;
+    }
+  }
+  &__list__hor {
+    display: flex;
+    & > li {
+      margin-right: 5px;
+    }
+  }
+  &-around-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  &-img {
+    width: 40px;
+  }
+  &__foot {
+    border: 1px solid rgba($black2, 0.2);
+    background-color: white;
+  }
+}

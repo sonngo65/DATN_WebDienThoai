@@ -1,0 +1,125 @@
+.cart-detail-item {
+  padding: 15px 20px;
+  border: 1px solid rgba($black2, 0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s ease-in;
+  &.disable {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($black2, 0.1);
+      z-index: 12;
+    }
+    &:hover {
+      border: 1px solid rgba($black2, 0.2);
+
+      .cart-detail-item__info .name {
+        color: rgba($black2, 0.8);
+      }
+    }
+  }
+  &:hover {
+    border: 1px solid $primaryColor;
+    .cart-detail-item__info .name {
+      color: $primaryColor;
+    }
+  }
+  &-left {
+    display: flex;
+    align-items: center;
+    flex: 6;
+  }
+  &__img {
+    width: 20%;
+    height: 70%;
+    img {
+      width: 80%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__info {
+    height: 100%;
+    .name {
+      font-size: $font-size-x;
+      font-weight: 600;
+      color: rgba($black2, 0.8);
+      text-decoration: none;
+      transition: all 0.2s ease-in;
+    }
+    .options {
+      font-size: $font-size-x;
+      color: $black;
+      font-weight: 300;
+    }
+    .quantity {
+      display: flex;
+      border-radius: 10px;
+      border: 1px solid rgba($black2, 0.2);
+      width: 200px;
+      height: 30px;
+      color: black;
+      & > span {
+        display: block;
+        text-align: center;
+        line-height: 30px;
+        position: relative;
+      }
+      svg {
+        display: block;
+        @include locate-center();
+        font-size: $font-size-e;
+        color: rgba($black2, 0.5);
+        font-weight: 300;
+        line-height: 30px;
+      }
+      .minus {
+        flex: 1;
+        border-right: 1px solid rgba($black2, 0.2);
+      }
+      .number {
+        flex: 3;
+      }
+      .plus {
+        flex: 1;
+        border-left: 1px solid rgba($black2, 0.2);
+      }
+    }
+  }
+  &-right {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    z-index: 13;
+  }
+  &__price {
+    strong {
+      color: $red;
+      font-size: $font-size-x;
+    }
+  }
+  &__delete {
+    text-align: left;
+    button {
+      padding: 3px 15px 5px 15px;
+      border-radius: 6px;
+      border: 1px solid $red;
+      background-color: white;
+      color: $red;
+      &:hover {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+}

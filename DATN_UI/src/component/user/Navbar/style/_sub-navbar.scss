@@ -1,0 +1,51 @@
+.sub-navbar {
+  position: absolute;
+  top: 200%;
+  right: 0;
+  left: 0;
+  height: 0;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 2px 0 $primaryColor;
+  border-radius: 15px;
+  overflow: hidden;
+  animation-name: nav-fade-down;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  font-family: "PT Sans", sans-serif;
+
+  &__head {
+    margin: 0;
+    font-size: $font-size-x;
+    font-family: 700;
+    padding: 0 10px;
+  }
+  &__list {
+    text-align: left;
+    width: 24%;
+    padding: 10px;
+    margin: 0;
+    @include list-style();
+  }
+  &__item {
+    padding: 10px;
+  }
+  &__link {
+    text-decoration: none;
+    color: $black;
+    font-size: $font-size-m;
+  }
+}
+// @keyframes fade-down{
+//   0% {
+//     opacity: 1;
+//     top: 100%;
+
+//     display: flex;
+//   }
+//   100% {
+//     opacity: 0;
+//     top: 150%;
+//     display: none;
+//   }
+// }

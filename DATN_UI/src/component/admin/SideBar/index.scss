@@ -1,0 +1,42 @@
+//
+// Component: Main Sidebar
+
+// @import "../../../style/variables";
+.main-sidebar {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: #0d0c22;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .brand-link {
+    height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 1px solid rgba($white, 0.3);
+  }
+  .sidebar {
+    .nav-item {
+    }
+    .nav-link {
+      padding: 0;
+      border-radius: 10px;
+      color: rgba($white, 0.4);
+      svg {
+        font-size: 22px;
+      }
+      &.active {
+        color: $white;
+        background-color: rgba($white, 0.4);
+      }
+    }
+  }
+}

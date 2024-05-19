@@ -1,0 +1,53 @@
+@mixin transition($second, $effect) {
+  transition: all $second $effect;
+}
+@mixin list-style() {
+  list-style-type: none;
+}
+@mixin locate-align-center() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin locate-center() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+}
+@keyframes nav-fade-up {
+  0% {
+    opacity: 0;
+    top: 200%;
+    height: 300px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 100%;
+    height: 300px;
+  }
+}
+
+@keyframes nav-fade-down {
+  0% {
+    opacity: 1;
+    top: 100%;
+    height: 300px;
+  }
+  10% {
+    opacity: 0.9;
+    top: 150%;
+    height: 250px;
+  }
+  99% {
+    opacity: 0;
+    top: 200%;
+    height: 250px;
+  }
+  100% {
+    opacity: 0;
+    top: 160%;
+    height: 0;
+  }
+}

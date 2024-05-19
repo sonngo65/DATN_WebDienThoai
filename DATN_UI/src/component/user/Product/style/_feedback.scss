@@ -1,0 +1,65 @@
+// @import "../../../../style/index.scss";
+.feedback-slider {
+  position: relative;
+  display: flex;
+  height: 300px;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0px 2px 2px 0 rgba($black, 0.2);
+
+  &-outer {
+    position: absolute;
+  }
+  &-item {
+    padding: 10px;
+    &__img {
+      img {
+        width: 100%;
+        max-height: 280px;
+        border-radius: 10px;
+        object-fit: contain;
+      }
+    }
+    &__info {
+    }
+  }
+
+  .info__name {
+    font-size: $font-size-xll;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .info__field {
+    font-size: $font-size-s;
+    font-style: oblique;
+    font-weight: 700;
+    color: $primaryColor;
+  }
+  .info__desciption {
+    text-align: justify;
+    font-size: $font-size-s;
+  }
+}
+@media screen and (max-width: 576px) {
+  .feedback-slider {
+    height: 500px;
+    &-item {
+      &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin: 0 auto;
+          width: 60%;
+          height: auto;
+        }
+      }
+      &__info {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

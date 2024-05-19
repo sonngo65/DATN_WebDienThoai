@@ -1,0 +1,74 @@
+.fix-screen {
+  position: fixed;
+  top: 50% !important;
+  transform: translateY(-50%);
+  position: fixed;
+  z-index: 21;
+  right: 0;
+  display: flex;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: $primaryColor;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    top: -30px;
+    right: 0px;
+    border-radius: 0 0 50px 0;
+    box-shadow: 30px 0 0 0 $primaryColor;
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    bottom: -30px;
+    right: 0px;
+    border-radius: 0 50px 0px 0;
+    box-shadow: 30px 0 0 0 $primaryColor;
+    pointer-events: none;
+  }
+  .phone-box,
+  .chat-box {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 30px;
+    display: inline-block;
+    background: $primaryColor;
+    position: relative;
+
+    svg {
+      font-size: $font-size-xll;
+    }
+  }
+  .phone-box {
+    animation-name: rotate-ring;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+}
+
+.back-top {
+  &.back-show {
+    opacity: 1;
+    bottom: 65px;
+  }
+  background: $primaryColor;
+  width: 35px;
+  height: 35px;
+  bottom: -65px;
+  right: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition-duration: 0.7s;
+  z-index: 8;
+  top: initial !important;
+}

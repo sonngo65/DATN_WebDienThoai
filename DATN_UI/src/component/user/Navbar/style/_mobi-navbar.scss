@@ -1,0 +1,93 @@
+.mobi-navbar {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 80px;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 2;
+  display: none;
+  &.open {
+    display: block;
+  }
+  .mobi-menu {
+    width: 100px;
+  }
+  &-ls {
+    position: static;
+    width: 100%;
+    text-align: center;
+    overflow-y: scroll;
+    height: 100%;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: rgba($black2, 0.9) !important;
+      cursor: pointer;
+      &:hover {
+        color: $primaryColor !important;
+      }
+    }
+
+    .level0 {
+      padding: 10px;
+      border-bottom: 0.1px solid rgba($black2, 0.2);
+      height: 200px;
+      font-size: $font-size-m;
+      font-weight: 700;
+    }
+    .lv1 {
+      display: none;
+      position: absolute;
+      left: 110%;
+      top: 10px;
+      width: calc(100vw - 145px);
+      height: 96%;
+      text-align: left;
+      text-transform: capitalize;
+      overflow-y: scroll;
+    }
+    .level1 {
+      & > a {
+        display: block;
+        padding: 10px;
+        font-size: $font-size-x;
+        font-weight: 700;
+        border-bottom: 0.1px solid rgba($black2, 0.2);
+      }
+    }
+    .lv2 {
+    }
+    .level2 {
+      & > a {
+        display: block;
+        font-size: $font-size-m;
+        font-weight: 500;
+
+        padding: 10px;
+        padding-left: 25px;
+        border-bottom: 0.1px solid rgba($black2, 0.2);
+      }
+      &::before {
+        content: "";
+        @include locate-align-center();
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $primaryColor;
+        left: 7px;
+      }
+    }
+
+    .level0.open {
+      background-color: $primaryColor;
+      & > a {
+        color: $white !important;
+      }
+      .lv1 {
+        display: block;
+      }
+    }
+  }
+}

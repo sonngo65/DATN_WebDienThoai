@@ -1,0 +1,24 @@
+.product-selected-box {
+  .product-selected {
+    flex: 2;
+    .img {
+      width: 100px;
+      height: 100px;
+      border: 1px solid $primaryColor;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .info {
+      margin-left: 10px;
+    }
+  }
+  input {
+    flex: 1;
+    &::placeholder {
+      color: rgba($black2, 0.3);
+    }
+  }
+}

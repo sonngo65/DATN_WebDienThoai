@@ -1,0 +1,37 @@
+.dashboard {
+  color: $black;
+  font-size: 14px;
+  font-weight: 500;
+  overflow-y: auto;
+  height: 100vh;
+  h5 {
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+  }
+  .title {
+    h5 {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    border-bottom: 1px solid $black;
+    svg {
+      font-size: 22px;
+      color: rgba($black2, 0.6);
+    }
+  }
+  .info {
+    .rounded-pill.text-danger {
+      background-color: rgba($danger, 0.15);
+    }
+    .rounded-pill.text-success {
+      background-color: rgba($success, 0.15);
+    }
+    h3 {
+      font-size: 32px;
+    }
+  }
+}

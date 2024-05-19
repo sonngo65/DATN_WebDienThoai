@@ -1,0 +1,43 @@
+.fl-search {
+  background-color: white;
+  border-radius: 10px;
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 116px;
+    padding: 10px;
+    text-align: center;
+  }
+  &__link {
+    height: 160px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba($black, 0.1);
+    border-radius: 10px;
+    &:hover {
+      box-shadow: 0 0 5px 0px $primaryColor;
+
+      p {
+        color: $primaryColor;
+      }
+    }
+    img {
+      margin: 0 auto;
+      border-radius: 30%;
+      width: 80%;
+    }
+    p {
+      color: $black;
+      font-size: $font-size-m;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+  }
+}

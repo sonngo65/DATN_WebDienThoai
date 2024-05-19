@@ -1,0 +1,18 @@
+.main-header {
+  height: 50px;
+  .title {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .navbar-nav {
+    .nav-item {
+    }
+    .nav-link {
+      svg {
+        font-size: 22px;
+      }
+    }
+  }
+  border-bottom: 1px solid rgba($black2, 0.05);
+}

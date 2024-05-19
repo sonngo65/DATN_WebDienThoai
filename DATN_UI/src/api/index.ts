@@ -1,0 +1,12 @@
+export * as ProductAPI from "./productAPI";
+export * as CategoryAPI from "./categoryAPI";
+export * as fileAPI from "./fileAPI";
+export * as VendorAPI from "./vendorAPI";
+export * as AccountAPI from "./accountAPI";
+export * as CartAPI from "./cartAPI";
+export * as OrderAPI from "./orderAPI";
+export * as NewsAPI from "./newsAPI";
+export * as FeedbackAPI from "./feedbackAPI";
+export * as BannerAPI from "./bannerAPI";
+export * as StatisticAPI from "./statisticAPI";
+export const url = "http://localhost:8081/api/v1/files/";

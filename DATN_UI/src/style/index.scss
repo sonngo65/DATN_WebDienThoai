@@ -1,0 +1,151 @@
+// bootstrap
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
+//
+@import "./color";
+@import "./font-size";
+@import "./mixins";
+@import "./custom";
+@import "./popup";
+
+@import "../component/Overlay";
+//
+
+@import "../component/user/Header";
+@import "../component/user/Cart";
+@import "../component/user/Footer";
+@import "../component/user/Home";
+@import "../component/user/InputGroup";
+@import "../component/user/Login";
+@import "../component/user/Navbar";
+@import "../component/user/News";
+@import "../component/user/OrderHistory";
+@import "../component/user/Payment";
+@import "../component/user/Product";
+@import "../component/user/Product/component/RelatedProduct";
+@import "../component/user/Product/component/SliderBtn";
+@import "../component/user/ProductDetail";
+@import "../component/user/ProductSearch";
+@import "../component/user/Search";
+@import "../component/user/Selection";
+@import "../component/user/Signup";
+@import "../component/user/SlideBanner";
+
+// admin
+@import "../component/admin/Chart";
+@import "../component/admin/Dashboard";
+@import "../component/admin/Home";
+@import "../component/admin/Navbar";
+@import "../component/admin/Product";
+@import "../component/admin/SideBar";
+@import "../component/admin/TextEditor";
+@import "../component/admin/Notify";
+@import "../component/admin/SearchBox";
+@import "../component/admin/Category";
+@import "../component/admin/ConfirmForm";
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(197, 197, 197);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #707070;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+
+  background-color: #f3f3f3;
+}
+
+.list-type-none {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  & > li > * {
+    text-decoration: none;
+  }
+}
+.text-deco-none {
+  text-decoration: none;
+}
+.list-item-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    display: block;
+    margin: 0 5px;
+  }
+}
+.bg-round-white {
+  background-color: rgba($white, 0.5);
+  border-radius: 5px;
+  padding: 10px 0px;
+  margin-left: 7px;
+}
+@keyframes rotate-ring {
+  0% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  50% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+}
+
+@keyframes m_more {
+  50% {
+    transform: translateY(7px);
+  }
+}
+.strike {
+  position: relative;
+  color: rgba($black2, 0.5);
+  font-size: $font-size-s;
+  font-weight: 100;
+  margin-left: 10px;
+  &::after {
+    content: "";
+    @include locate-align-center();
+    left: 0;
+    width: 105%;
+    height: 0.1px;
+    background-color: rgba($black2, 0.5);
+  }
+}
+.color-price {
+  color: $hoverMenu;
+}
+.cus-primary-color {
+  color: $primaryColor !important;
+}
+.link-none-type {
+  color: $black;
+  text-decoration: none;
+}

@@ -1,0 +1,45 @@
+.cart-detail {
+  border-radius: 10px;
+  box-shadow: 2px 0 4px 0 rgba($black2, 0.2);
+  background-color: $white;
+  &-head {
+    h5 {
+      color: $black;
+      font-weight: 500;
+      font-size: $font-size-xl;
+      text-transform: uppercase;
+    }
+  }
+  .total-price {
+    border-radius: 10px;
+    background-color: $hoverMenu;
+    color: $white;
+    font-size: $font-size-x;
+    font-weight: 500;
+    text-transform: uppercase;
+    .number {
+      font-size: $font-size-xl;
+      font-weight: 700;
+    }
+  }
+  .pay-btn {
+    border-radius: 10px;
+    border: 1px solid $primaryColor;
+    background-color: $priceColor;
+    color: $white;
+    font-size: $font-size-x;
+    font-weight: 600;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $primaryColor;
+    }
+  }
+  .del-all-btn {
+    border-radius: 10px;
+    background-color: $black2;
+    color: $white;
+    border: none;
+    font-size: $font-size-x;
+    font-weight: 600;
+  }
+}
